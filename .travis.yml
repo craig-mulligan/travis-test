@@ -1,12 +1,10 @@
 language: node_js
 node_js:
-  - "6"
+- '6'
 script:
-  - echo 'Success!'
-notifications:
-  webhooks:
-    urls:
-      - https://api.travis-ci.org/repo/craig-mulligan%2Ftravis-slave/requests
-    on_success: always
-    on_failure: never
-    on_start: never
+- echo 'Success!'
+after_success:
+- node travis-trigger.js
+env:
+  global:
+    secure: wSw4bE6yRbugHUM+4MBDr8jqsgBBd9FSaaWA4955gjQro2S6Rpof7+gtA2dPwcufdOqk7GadJ/9u8vCoAwi0bFX+8P3AFBRtT5v1Cqiyvdnog0yOy6jDExsErLjh9mHxEt74z/PRVDRMxGYmWV6fiywstUVAf64yzcuuPYMbbrVk+kuWv0IC5lgENrl/96ZnTcZ4hWoskGlO8/5I2S0Cm1j2nKU71L4YQ/cZc91OF0mqz6svVn4XfUzrLmakd8OejuMsFoifQvpeOIL0UdZDfla9aZUGh+kjB5+DtpNqJV69dpkSF1MIvB8utOUmw/BRco/6Ym5Yu5PP93GSKgSCFYP11moM/N+ivBHuvpNHaFK2Fe0FuHS4m3JxhNvaP9IgBgb5gz02csvwSwkkp78EvBcC6ICjJRBpG9f3a833mNEmFqxEtH7OxTE6V2gPKBpFPrB0HcJqnauDG/q6npwwVvYcfayBBPhBDQhMmwdZPYipC3Ja9hmvm3ftwuzSru14m1qp4cJqQ3w3qeN8SqQAkbEA9cXogXw4zK9UBnakKQL5hRQgMt6SpT3PjXseW+g5VcvLvIrDPgVZpgXiWCrJxasOhZ8DWJWm+AV3zmjxJvlJjZ/Kpue9BnsGVHpyKvQkrgsmS6XxbQcsIDdYjtO5nBjd6jjMeqsl9lSb41Xc//0=
