@@ -1,5 +1,7 @@
 const request = require('request');
 
+console.log('Triggering dependent builds')
+
 var options = {
   url: 'https://api.github.com/repos/craig-mulligan/travis-slave/request',
   method: 'post',
