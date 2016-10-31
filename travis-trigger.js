@@ -21,6 +21,7 @@ var options = {
 };
 
 function callback(error, response, body) {
+  console.log(response.statusCode)
   if (!error && response.statusCode == 200) {
     console.log("Triggered build of slave repo");
   } else {
