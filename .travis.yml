@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "6"
+script:
+  - echo 'Success!'
+notifications:
+  webhooks:
+    urls:
+      - https://api.travis-ci.org/repo/craig-mulligan%2Ftravis-slave/requests
+    on_success: always
+    on_failure: never
+    on_start: never
